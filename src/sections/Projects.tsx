@@ -11,7 +11,7 @@ export const Projects = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3 }}
             viewport={{ once: true }}
-            className="text-5xl sm:text-6xl md:text-7xl xl:text-8xl font-title font-bold text-center text-zinc-300"
+            className="text-5xl sm:text-6xl md:text-7xl xl:text-8xl font-title font-bold text-center text-gray-300"
           >
             Projects
             <span className="text-indigo-600">.</span>
@@ -29,7 +29,7 @@ export const Projects = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3, delay: 0.2 }}
             viewport={{ once: true }}
-            className="text-xl md:text-2xl text-zinc-400 mt-6 max-w-2xl mx-auto text-center"
+            className="text-xl md:text-2xl text-gray-400 mt-6 max-w-2xl mx-auto text-center"
           >
             Here are some of the projects that I've worked on.
           </motion.p>

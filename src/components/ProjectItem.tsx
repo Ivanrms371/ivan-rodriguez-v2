@@ -12,7 +12,7 @@ interface Props {
 
 export const ProjectItem = ({ project, projectIndex }: Props) => {
   const [windowWidth, setWindowWidth] = useState(
-    typeof window !== "undefined" ? window.innerWidth : null
+    typeof window !== "undefined" ? window.innerWidth : null,
   );
 
   useEffect(() => {
@@ -32,7 +32,7 @@ export const ProjectItem = ({ project, projectIndex }: Props) => {
   if (!windowWidth) return null;
 
   return (
-    <li className="flex flex-col lg:flex-row lg:even:flex-row-reverse gap-5 md:gap-10 pb-15 border-b border-zinc-800 last-of-type:border-0 last-of-type:pb-0">
+    <li className="flex flex-col lg:flex-row lg:even:flex-row-reverse gap-5 md:gap-10 pb-15 border-b border-gray-800/80 last-of-type:border-0 last-of-type:pb-0">
       <motion.img
         initial={{
           opacity: 0,
@@ -55,7 +55,7 @@ export const ProjectItem = ({ project, projectIndex }: Props) => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3 }}
           viewport={{ once: true }}
-          className="text-3xl font-title font-bold text-zinc-300  text-nowrap overflow-hidden"
+          className="text-3xl font-title font-bold text-gray-300  text-nowrap overflow-hidden"
         >
           {project.title}
         </motion.h3>
@@ -69,14 +69,14 @@ export const ProjectItem = ({ project, projectIndex }: Props) => {
                 viewport={{ once: true }}
                 key={`${project.title}-${name}`}
                 className={twMerge(
-                  "text-zinc-50 font-medium bg-purple-600/40 px-3 py-1.5 text-xs md:text-sm  rounded-full flex gap-1.5 items-center",
-                  color
+                  "text-gray-50 font-medium bg-purple-600/40 px-3 py-1.5 text-xs md:text-sm  rounded-full flex gap-1.5 items-center",
+                  color,
                 )}
               >
                 <Icon className="size-5" />
                 {name}
               </motion.li>
-            )
+            ),
           )}
         </ul>
 
@@ -85,7 +85,7 @@ export const ProjectItem = ({ project, projectIndex }: Props) => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3, delay: 0.3 }}
           viewport={{ once: true }}
-          className="md:text-xl text-zinc-400 mt-6 flex-1"
+          className="md:text-xl text-gray-400 mt-6 flex-1"
         >
           {project.description}
         </motion.p>
@@ -100,7 +100,7 @@ export const ProjectItem = ({ project, projectIndex }: Props) => {
                 transition={{ duration: 0.3, delay: 0.2 }}
                 target="_blank"
                 href={project.codeLink}
-                className=" bg-indigo-700 hover:bg-indigo-800 transition-colors duration-300 text-sm px-6 py-3 rounded-full text-zinc-100 flex gap-2 items-center cursor-pointer"
+                className=" bg-indigo-700 hover:bg-indigo-800 transition-colors duration-300 text-sm px-6 py-3 rounded-full text-gray-100 flex gap-2 items-center cursor-pointer"
               >
                 <GithubIcon className="size-4" />
                 Code
@@ -126,7 +126,7 @@ export const ProjectItem = ({ project, projectIndex }: Props) => {
               transition={{ duration: 0.3, delay: 0.2 }}
               target="_blank"
               href={project.previewLink}
-              className=" bg-indigo-700 hover:bg-indigo-800 transition-colors duration-300 text-sm px-6 py-3 rounded-full text-zinc-100 flex gap-2 items-center cursor-pointer"
+              className=" bg-indigo-700 hover:bg-indigo-800 transition-colors duration-300 text-sm px-6 py-3 rounded-full text-gray-100 flex gap-2 items-center cursor-pointer"
             >
               <PreviewIcon className="size-4" />
               Preview

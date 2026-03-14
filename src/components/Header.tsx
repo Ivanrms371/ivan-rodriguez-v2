@@ -73,8 +73,8 @@ export const Header = () => {
           }}
           href="#about"
           className={twMerge(
-            "text-zinc-200 font-semibold px-4 sm:px-6 py-2 text-sm md:text-base transition-colors duration-300 links-animation",
-            activeLink === "about" && "active"
+            "text-gray-200 font-semibold px-4 sm:px-6 py-2 text-sm md:text-base transition-colors duration-300 links-animation",
+            activeLink === "about" && "active",
           )}
           onClick={() => handleClick("about")}
         >
@@ -86,8 +86,8 @@ export const Header = () => {
           }}
           href="#projects"
           className={twMerge(
-            "text-zinc-200 font-semibold px-4 sm:px-6 py-2 text-sm md:text-base transition-colors duration-300 links-animation",
-            activeLink === "projects" && "active"
+            "text-gray-200 font-semibold px-4 sm:px-6 py-2 text-sm md:text-base transition-colors duration-300 links-animation",
+            activeLink === "projects" && "active",
           )}
           onClick={() => handleClick("projects")}
         >
@@ -95,7 +95,7 @@ export const Header = () => {
         </a>
         <a
           href="mailto:ivanrms371@gmail.com"
-          className="text-zinc-200 font-semibold px-4 sm:px-6 py-2 text-sm md:text-base transition-colors duration-300"
+          className="text-gray-200 font-semibold px-4 sm:px-6 py-2 text-sm md:text-base transition-colors duration-300"
         >
           Contact
         </a>
