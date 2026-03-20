@@ -19,7 +19,7 @@ export const About = () => {
               viewport={{ once: true }}
               className="block"
             >
-              Hello I'm Iván,
+              Hey I'm Iván,
             </motion.span>
             <motion.span
               initial={{ opacity: 0, y: -20 }}
