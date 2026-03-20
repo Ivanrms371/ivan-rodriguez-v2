@@ -19,7 +19,7 @@ export const About = () => {
               viewport={{ once: true }}
               className="block"
             >
-              Hi I'm Iván,
+              Hello I'm Iván,
             </motion.span>
             <motion.span
               initial={{ opacity: 0, y: -20 }}
@@ -50,8 +50,8 @@ export const About = () => {
               initial={{ opacity: 0, scale: 0.75 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.3, delay: 0.4 }}
-              href="/IvanRodriguez_CV.pdf"
-              download="IvanRodriguez_CV.pdf"
+              href="/en/Ivan_Rodriguez_Frontend_Developer_CV.pdf"
+              download="Ivan_Rodriguez_Frontend_Developer_CV.pdf"
               className="bg-indigo-600 text-white py-3 px-6 rounded-full text-sm font-semibold hover:bg-indigo-700 transition-colors duration-300 cursor-pointer"
             >
               Download CV
