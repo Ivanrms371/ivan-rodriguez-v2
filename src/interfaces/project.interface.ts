@@ -7,7 +7,7 @@ export interface Project {
     image: string;
     technologies: Technology[]
     codeLink?: string;
-    previewLink: string;
+    previewLink?: string;
 }
 
 export interface Technology {

@@ -11,7 +11,7 @@ export const About = () => {
     >
       <div className="container w-full px-4">
         <div className="max-w-5xl relative mx-auto">
-          <h1 className="text-5xl sm:text-6xl md:text-7xl xl:text-8xl text-center font-bold font-title text-gray-300 mx-auto mb-6">
+          <h1 className="text-5xl sm:text-6xl md:text-7xl xl:text-8xl text-center font-bold font-title text-neutral-300 mx-auto mb-6">
             <motion.span
               initial={{ opacity: 0, y: -20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -38,7 +38,7 @@ export const About = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3, delay: 0.3 }}
             viewport={{ once: true }}
-            className="text-xl md:text-2xl text-gray-400 max-w-2xl font-medium mx-auto text-center"
+            className="text-xl md:text-2xl text-neutral-400 max-w-2xl font-medium mx-auto text-center"
           >
             I'm passionate about crafting amazing user experience, accesibles,
             and beautifuls
@@ -66,7 +66,7 @@ export const About = () => {
                 aria-label="My Github Account"
                 href="https://github.com/IvanARM21"
               >
-                <GithubIcon className="size-7 fill-gray-400 hover:scale-125 transition-all duration-300" />
+                <GithubIcon className="size-7 fill-neutral-400 hover:scale-125 transition-all duration-300" />
               </motion.a>
               <motion.a
                 viewport={{ once: true }}
@@ -77,7 +77,7 @@ export const About = () => {
                 aria-label="My Linkedin Account"
                 href="https://www.linkedin.com/in/iv%C3%A1n-rodr%C3%ADguez-moreira-b9848628b/"
               >
-                <LinkedinIcon className="size-7 fill-gray-400 hover:scale-125 transition-all duration-300" />
+                <LinkedinIcon className="size-7 fill-neutral-400 hover:scale-125 transition-all duration-300" />
               </motion.a>
             </div>
           </div>

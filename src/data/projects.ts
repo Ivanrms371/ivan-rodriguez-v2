@@ -3,37 +3,62 @@ import { AstroIcon } from "../icons/AstroIcon";
 import { TailwindCSS } from "../icons/TailwindCSS";
 import { NextjsIcon } from "../icons/NextIcon";
 import { PrismaIcon } from "../icons/PrismaIcon";
-import { MercadoPagoIcon } from "../icons/MercadoPagoIcon";
+import { LemonSqueezyIcon } from "../icons/LemonSqueezyIcon";
+import { ReactIcon } from "../icons/ReactIcon";
+import { NestIcon } from "../icons/NestIcon";
 
 export const technologies: Technology[] = [
   {
     name: "Astro",
-    color: "bg-purple-600/30 text-gray-50",
+    color: "bg-purple-600/10 text-neutral-50",
     icon: AstroIcon,
   },
   {
     name: "TailwindCSS",
-    color: "bg-cyan-600/30 text-gray-50",
+    color: "bg-cyan-600/10 text-neutral-50",
     icon: TailwindCSS,
   },
   {
-    name: "Next.js",
-    color: "bg-neutral-950 text-gray-50",
-    icon: NextjsIcon,
-  },
-  {
     name: "Prisma",
-    color: "bg-slate-600/30 text-gray-50",
+    color: "bg-slate-600/10 text-neutral-50",
     icon: PrismaIcon,
   },
   {
-    name: "MercadoPago",
-    color: "bg-blue-700/30 text-gray-50",
-    icon: MercadoPagoIcon,
+    name: "Lemon Squeezy",
+    color: "bg-yellow-600/10 text-neutral-50",
+    icon: LemonSqueezyIcon,
+  },
+  {
+    name: "React",
+    color: "bg-sky-600/10 text-neutral-50",
+    icon: ReactIcon,
+  },
+  {
+    name: "NestJS",
+    color: "bg-red-600/10 text-neutral-50",
+    icon: NestIcon,
+  },
+  {
+    name: "Next.js",
+    color: "bg-neutral-950/60 text-neutral-50",
+    icon: NextjsIcon,
   },
 ];
 
 export const projects: Project[] = [
+  {
+    title: "Booking App - In Active Development",
+    description:
+      "A multi-tenant booking platform for service businesses, currently in development. It features online booking for clients, calendar management for staff, an admin dashboard, It use Lemon Squeezy for billing, and automated notifications with multiple channels (in-app, Whatsapp, Email) with retry logic and delivery logs.",
+    image: "/bookify.png",
+    technologies: [
+      technologies.find((t) => t.name === "React")!,
+      technologies.find((t) => t.name === "NestJS")!,
+      technologies.find((t) => t.name === "Lemon Squeezy")!,
+      technologies.find((t) => t.name === "Prisma")!,
+      technologies.find((t) => t.name === "TailwindCSS")!,
+    ],
+  },
   {
     title: "Coffee Code",
     description:
@@ -59,7 +84,6 @@ export const projects: Project[] = [
       technologies.find((t) => t.name === "Next.js")!,
       technologies.find((t) => t.name === "TailwindCSS")!,
       technologies.find((t) => t.name === "Prisma")!,
-      technologies.find((t) => t.name === "MercadoPago")!,
     ],
 
     codeLink: "https://github.com/IvanARM21/trendy-threads/tree/develop",
