@@ -28,7 +28,7 @@ export const About = () => {
               viewport={{ once: true }}
               className="block"
             >
-              a Frontend Developer
+              a Software Developer
               <span className="text-indigo-600">.</span>
             </motion.span>
           </h1>

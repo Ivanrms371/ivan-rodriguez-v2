@@ -94,6 +94,19 @@ export const Header = () => {
           Projects
         </a>
         <a
+          ref={(el) => {
+            if (el) linksRef.current["skills"] = el;
+          }}
+          href="#skills"
+          className={twMerge(
+            "text-neutral-200 font-semibold px-4 sm:px-6 py-2 text-sm md:text-base transition-colors duration-300 links-animation",
+            activeLink === "skills" && "active",
+          )}
+          onClick={() => handleClick("skills")}
+        >
+          Skills
+        </a>
+        <a
           href="mailto:ivanrms371@gmail.com"
           className="text-neutral-200 font-semibold px-4 sm:px-6 py-2 text-sm md:text-base transition-colors duration-300"
         >

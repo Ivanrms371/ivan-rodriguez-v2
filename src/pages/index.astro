@@ -2,10 +2,13 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import { About } from "../sections/About";
 import { Projects } from "../sections/Projects";
+import { Skills } from "../sections/Skills";
 ---
 
 <MainLayout>
   <About client:load />
 
   <Projects client:visible />
+
+  <Skills />
 </MainLayout>
