@@ -1,3 +1,5 @@
+import { motion } from "motion/react";
+
 const technicalSkills = [
   { title: "Frontend", skills: ["JavaScript", "TypeScript", "React", "Next.js", "Astro", "React Query", "Zustand"] },
   { title: "UI & styling", skills: ["HTML", "CSS", "Tailwind CSS", "Responsive design"] },
@@ -16,17 +18,37 @@ export const Skills = () => (
   <section className="py-24 scroll-mt-24" id="skills" aria-labelledby="skills-heading">
     <div className="max-w-screen-xl mx-auto px-4">
       <div className="mb-12 text-center">
-        <h2 id="skills-heading" className="text-5xl sm:text-6xl md:text-7xl xl:text-8xl font-title font-bold text-neutral-300">
+        <motion.h2
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3 }}
+          viewport={{ once: true }}
+          id="skills-heading" className="text-5xl sm:text-6xl md:text-7xl xl:text-8xl font-title font-bold text-neutral-300">
           Skills<span className="text-indigo-600">.</span>
-        </h2>
-        <div className="w-20 h-1 rounded-full bg-indigo-600/60 mx-auto my-6" />
-        <p className="text-xl md:text-2xl text-neutral-400 max-w-2xl mx-auto">
+        </motion.h2>
+        <motion.div
+          initial={{ opacity: 0, width: 0 }}
+          whileInView={{ opacity: 1, width: 80 }}
+          transition={{ duration: 0.3, delay: 0.2 }}
+          viewport={{ once: true }}
+          className="w-20 h-1 rounded-full bg-indigo-600/60 mx-auto my-6" />
+        <motion.p
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3, delay: 0.2 }}
+          viewport={{ once: true }}
+          className="text-xl md:text-2xl text-neutral-400 max-w-2xl mx-auto">
           The technologies I build with and the way I work with others.
-        </p>
+        </motion.p>
       </div>
 
       <div className="grid gap-6 md:grid-cols-2">
-        <div className="rounded-3xl border border-neutral-800 bg-neutral-900/60 p-6 sm:p-8">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4 }}
+          viewport={{ once: true, amount: 0.2 }}
+          className="rounded-3xl border border-neutral-800 bg-neutral-900/60 p-6 sm:p-8">
           <p className="text-sm font-semibold uppercase tracking-widest text-indigo-400 mb-3">What I build with</p>
           <h3 className="font-title text-3xl font-bold text-neutral-200 mb-8">Technical skills</h3>
           <div className="space-y-6">
@@ -41,9 +63,14 @@ export const Skills = () => (
               </div>
             ))}
           </div>
-        </div>
+        </motion.div>
 
-        <div className="rounded-3xl border border-neutral-800 bg-neutral-900/60 p-6 sm:p-8">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4, delay: 0.1 }}
+          viewport={{ once: true, amount: 0.2 }}
+          className="rounded-3xl border border-neutral-800 bg-neutral-900/60 p-6 sm:p-8">
           <p className="text-sm font-semibold uppercase tracking-widest text-indigo-400 mb-3">How I work</p>
           <h3 className="font-title text-3xl font-bold text-neutral-200 mb-8">Soft skills</h3>
           <ul className="space-y-6">
@@ -54,7 +81,7 @@ export const Skills = () => (
               </li>
             ))}
           </ul>
-        </div>
+        </motion.div>
       </div>
     </div>
   </section>

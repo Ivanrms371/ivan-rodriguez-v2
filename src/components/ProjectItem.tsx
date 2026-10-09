@@ -1,4 +1,4 @@
-import  { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { twMerge } from "tailwind-merge";
 import { GithubIcon } from "../icons/Github";
 import { PreviewIcon } from "../icons/PreviewIcon";
@@ -58,7 +58,6 @@ export const ProjectItem = ({ project, projectIndex }: Props) => {
           className="text-3xl font-title font-bold text-neutral-300  text-nowrap overflow-hidden"
         >
           {project.title}
-
         </motion.h3>
         <ul className="flex gap-2 lg:gap-4 mt-4 flex-wrap">
           {project.technologies.map(
@@ -92,44 +91,44 @@ export const ProjectItem = ({ project, projectIndex }: Props) => {
         </motion.p>
 
         <div className="flex gap-4 mt-6">
-  {project?.codeLink && (
-    <motion.a
-      viewport={{ once: true }}
-      initial={{ opacity: 0, scale: 0.75 }}
-      whileInView={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.3, delay: 0.2 }}
-      target="_blank"
-      href={project.codeLink}
-      className="bg-indigo-700 hover:bg-indigo-800 transition-colors duration-300 text-sm px-6 py-3 rounded-full text-neutral-100 flex gap-2 items-center cursor-pointer"
-    >
-      <GithubIcon className="size-4" />
-      Code
-    </motion.a>
-  )}
+          {project?.codeLink && (
+            <motion.a
+              viewport={{ once: true }}
+              initial={{ opacity: 0, scale: 0.75 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.3, delay: 0.2 }}
+              target="_blank"
+              href={project.codeLink}
+              className="bg-indigo-700 hover:bg-indigo-800 transition-colors duration-300 text-sm px-6 py-3 rounded-full text-neutral-100 flex gap-2 items-center cursor-pointer"
+            >
+              <GithubIcon className="size-4" />
+              Code
+            </motion.a>
+          )}
 
-  {/* Renderizar Preview Link */}
-  {project?.previewLink && (
-    <motion.a
-      viewport={{ once: true }}
-      initial={{ opacity: 0, scale: 0.75 }}
-      whileInView={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.3, delay: 0.2 }}
-      target="_blank"
-      href={project.previewLink}
-      className={`
+          {/* Renderizar Preview Link */}
+          {project?.previewLink && (
+            <motion.a
+              viewport={{ once: true }}
+              initial={{ opacity: 0, scale: 0.75 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.3, delay: 0.2 }}
+              target="_blank"
+              href={project.previewLink}
+              className={`
         text-sm px-6 py-3 rounded-full flex gap-2 items-center cursor-pointer transition-colors duration-300
         ${
           project.codeLink
-            ? "bg-indigo-950/60 hover:bg-indigo-950 text-indigo-600" // Secundario si hay Code
-            : "bg-indigo-700 hover:bg-indigo-800 text-neutral-100"    // Primario si NO hay Code
+            ? "bg-indigo-950/60 hover:bg-indigo-950 text-indigo-600"
+            : "bg-indigo-700 hover:bg-indigo-800 text-neutral-100"
         }
       `}
-    >
-      <PreviewIcon className="size-4" />
-      Preview
-    </motion.a>
-  )}
-</div>
+            >
+              <PreviewIcon className="size-4" />
+              Preview
+            </motion.a>
+          )}
+        </div>
       </div>
     </li>
   );

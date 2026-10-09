@@ -28,7 +28,7 @@ export const About = () => {
               viewport={{ once: true }}
               className="block"
             >
-              a Software Developer
+              a Full-Stack Developer
               <span className="text-indigo-600">.</span>
             </motion.span>
           </h1>
@@ -50,8 +50,8 @@ export const About = () => {
               initial={{ opacity: 0, scale: 0.75 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.3, delay: 0.4 }}
-              href="/en/Ivan_Rodriguez_Frontend_Developer_CV.pdf"
-              download="Ivan_Rodriguez_Frontend_Developer_CV.pdf"
+              href="/Ivan_Rodriguez_CV_Software_Developer.pdf"
+              download="Ivan_Rodriguez_CV_Software_Developer.pdf"
               className="bg-indigo-600 text-white py-3 px-6 rounded-full text-sm font-semibold hover:bg-indigo-700 transition-colors duration-300 cursor-pointer"
             >
               Download CV
@@ -64,7 +64,7 @@ export const About = () => {
                 transition={{ duration: 0.3, delay: 0.5 }}
                 target="_blank"
                 aria-label="My Github Account"
-                href="https://github.com/IvanARM21"
+                href="https://github.com/ivanrms371"
               >
                 <GithubIcon className="size-7 fill-neutral-400 hover:scale-125 transition-all duration-300" />
               </motion.a>
@@ -75,7 +75,7 @@ export const About = () => {
                 transition={{ duration: 0.3, delay: 0.5 }}
                 target="_blank"
                 aria-label="My Linkedin Account"
-                href="https://www.linkedin.com/in/iv%C3%A1n-rodr%C3%ADguez-moreira-b9848628b/"
+                href="https://www.linkedin.com/in/ivanrms371/"
               >
                 <LinkedinIcon className="size-7 fill-neutral-400 hover:scale-125 transition-all duration-300" />
               </motion.a>
