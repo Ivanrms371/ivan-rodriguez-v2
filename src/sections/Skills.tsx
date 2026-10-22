@@ -3,7 +3,7 @@ import { motion } from "motion/react";
 const technicalSkills = [
   { title: "Frontend", skills: ["JavaScript", "TypeScript", "React", "Next.js", "Astro", "React Query", "Zustand"] },
   { title: "UI & styling", skills: ["HTML", "CSS", "Tailwind CSS", "Responsive design"] },
-  { title: "Backend & data", skills: ["NestJS", "Prisma", "PostgreSQL", "Java (Learning)", "Sockets"] },
+  { title: "Backend & data", skills: ["NestJS", "Prisma", "PostgreSQL", "Java (Learning)", "Spring", "Sockets"] },
   { title: "Developer tools", skills: ["Git", "GitHub"] },
 ];
 
@@ -54,7 +54,7 @@ export const Skills = () => (
           <div className="space-y-6">
             {technicalSkills.map(({ title, skills }) => (
               <div key={title}>
-                <h4 className="text-neutral-400 text-sm font-semibold mb-3">{title}</h4>
+                <h4 className="text-base font-semibold text-neutral-300 mb-3">{title}</h4>
                 <ul className="flex flex-wrap gap-2">
                   {skills.map((skill) => (
                     <li key={skill} className="rounded-full border border-indigo-500/20 bg-indigo-500/10 px-3 py-1.5 text-sm text-neutral-200">{skill}</li>
@@ -80,6 +80,29 @@ export const Skills = () => (
                 <p className="text-neutral-400 leading-relaxed">{description}</p>
               </li>
             ))}
+          </ul>
+
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4, delay: 0.15 }}
+          viewport={{ once: true, amount: 0.2 }}
+          className="flex flex-col gap-6 rounded-3xl border border-neutral-800 bg-neutral-900/60 p-6 sm:flex-row sm:items-center sm:gap-12 sm:p-8 md:col-span-2">
+          <div className="shrink-0">
+            <p className="text-sm font-semibold uppercase tracking-widest text-indigo-400 mb-2">How I communicate</p>
+            <h3 className="font-title text-3xl font-bold text-neutral-200">Languages</h3>
+          </div>
+          <ul className="flex flex-col gap-5 sm:flex-1 sm:flex-row sm:items-center sm:justify-around">
+            <li>
+              <p className="font-semibold text-neutral-200">English</p>
+              <p className="text-sm text-indigo-300">B1 · Intermediate</p>
+            </li>
+            <li>
+              <p className="font-semibold text-neutral-200">Spanish</p>
+              <p className="text-sm text-indigo-300">Native</p>
+            </li>
           </ul>
         </motion.div>
       </div>
