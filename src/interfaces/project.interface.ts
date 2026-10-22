@@ -7,6 +7,7 @@ export interface Project {
     image: string;
     technologies: Technology[]
     codeLink?: string;
+    codeLinks?: { label: string; url: string }[];
     previewLink?: string;
 }
 

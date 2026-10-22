@@ -44,7 +44,7 @@ export const ProjectItem = ({ project, projectIndex }: Props) => {
         viewport={{ once: true }}
         src={project.image}
         alt={`Image project ${project.title}`}
-        className="w-full h-auto lg:w-[500px] lg:h-[400px] object-cover rounded-4xl"
+        className="w-full h-auto lg:w-[580px] lg:h-[400px] object-cover rounded-3xl"
         loading="lazy"
         width={400}
         height={200}
@@ -90,7 +90,23 @@ export const ProjectItem = ({ project, projectIndex }: Props) => {
           {project.description}
         </motion.p>
 
-        <div className="flex gap-4 mt-6">
+        <div className="flex flex-wrap gap-3 mt-6">
+          {!!project.codeLinks?.length && (
+            <p className="w-full text-sm font-semibold text-neutral-400">View code</p>
+          )}
+          {project.codeLinks?.map(({ label, url }) => (
+            <a
+              key={url}
+              href={url}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`View ${label} code on GitHub`}
+              className="bg-indigo-700 hover:bg-indigo-800 transition-colors duration-300 text-sm px-4 py-3 rounded-full text-neutral-100 flex gap-2 items-center cursor-pointer"
+            >
+              <GithubIcon className="size-4" />
+              {label}
+            </a>
+          ))}
           {project?.codeLink && (
             <motion.a
               viewport={{ once: true }}

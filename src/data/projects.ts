@@ -50,7 +50,12 @@ export const projects: Project[] = [
     title: "Booking App - In Active Development",
     description:
       "A multi-tenant booking platform for service businesses, currently in development. It features online booking for clients, calendar management for staff, an admin dashboard, It use Lemon Squeezy for billing, and automated notifications with multiple channels (in-app, Whatsapp, Email) with retry logic and delivery logs.",
-    image: "/bookify.png",
+    image: "/projects/1.png",
+    codeLinks: [
+      { label: "Backend", url: "https://github.com/Ivanrms371/bookify-backend" },
+      { label: "Frontend", url: "https://github.com/Ivanrms371/bookify-frontend" },
+      { label: "Public Web", url: "https://github.com/Ivanrms371/bookify-web" },
+    ],
     technologies: [
       technologies.find((t) => t.name === "React")!,
       technologies.find((t) => t.name === "NestJS")!,
