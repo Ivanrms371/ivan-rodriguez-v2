@@ -1,7 +1,5 @@
 import { motion } from "motion/react";
 
-import { motion } from "motion/react";
-
 const technicalSkills = [
   {
     title: "Frontend",
