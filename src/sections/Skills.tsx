@@ -1,12 +1,35 @@
 import { motion } from "motion/react";
 
-const technicalSkills = [
-  { title: "Frontend", skills: ["JavaScript", "TypeScript", "React", "Next.js", "Astro", "React Query", "Zustand"] },
-  { title: "UI & styling", skills: ["HTML", "CSS", "Tailwind CSS", "Responsive design"] },
-  { title: "Backend & data", skills: ["NestJS", "Prisma", "PostgreSQL", "Java (Learning)", "Spring", "Sockets"] },
-  { title: "Developer tools", skills: ["Git", "GitHub"] },
-];
+import { motion } from "motion/react";
 
+const technicalSkills = [
+  {
+    title: "Frontend",
+    skills: ["JavaScript", "TypeScript", "React", "Next.js", "Astro", "TanStack Query", "Zustand"],
+  },
+  {
+    title: "UI & Styling",
+    skills: ["HTML", "CSS", "Tailwind CSS", "Responsive Design"],
+  },
+  {
+    title: "Backend & Databases",
+    skills: [
+      "Node.js",
+      "NestJS",
+      "Prisma",
+      "PostgreSQL",
+      "Java",
+      "Spring Boot",
+      "Spring Security",
+      "Spring Data JPA",
+      "Hibernate",
+    ],
+  },
+  {
+    title: "DevOps & Tools",
+    skills: ["Docker", "Git", "GitHub"],
+  },
+];
 const softSkills = [
   { title: "Communication", description: "Sharing ideas clearly and keeping conversations practical." },
   { title: "Teamwork", description: "Collaborating, exchanging feedback, and working toward shared goals." },
